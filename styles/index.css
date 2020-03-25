@@ -22,8 +22,209 @@ html {
 }
 
 
+/******************
+    Navbar
+    **************/
+    #top_navbar
+    {
+        position:fixed;
+        width:100%;
+        top:0px;
+        background:#fff;
+        height:80px;
+        z-index: 999;
+        box-shadow:0px 1px 20px 0px rgba(46, 61, 73, 0.2);
+    }
+     .navbar_list
+    {
+        display:flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin:20px auto;
+        list-style-type: none;
+    }
+    .navbar_logo
+    {
+        width:150px;
+    }
+    .navbar_list > li > input[name="search_video"]
+    {
+        height:30px;
+        width:50%;
+        text-align: center;
+        display: inline-block;
+        background:rgba(253, 252, 71, 0.5);
+        margin-left:14rem;
+        border:1px solid #f5af19;
+    }
+   
+    .navbar-list > li.navbar-left
+    {
+      flex-grow:1;
+    }
+    .navbar_list > li.navbar-center
+    {
+      flex-grow:2;
+    }
+    .navbar-list > li.navbar-right
+    {
+      flex-grow:1;
+    }
+    /****Navbar right icons*/
+    .navbar_right-icons > span >img
+    {
+        height:50px;
+        border-radius:50%;
+    }
+    .navbar_right-icons > span
+    {
+        margin:auto 20px;
+    }
+    .search-btn-navbar
+    {
+      position:relative;
+      height:30px;
+      width:50px;
+      display: inline-block;
+      margin:auto auto;
+      text-align: center;
+      background:#f5af19;
+      border:1px solid #f5af19;
+    }
+    .fa-searchengin
+    {
+      transform: scale(1.8);
+      color:#b92b27;
+    }
+    
 
-/* Styles for the hero image */
+    .fa-video,
+    .fa-bell
+    {
+        font-size:1.5rem;
+        margin-bottom:0.9rem;
+        color:#f5af19;
+       
+    }
+    
+    /********
+        Side navigaton bar
+        **************/
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+    
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+    
+    .wrapper
+    {
+      transition: margin-left .5s;
+      
+    }
+
+    /********
+        Dropdown Menu for uploading videos and Notification
+      
+        ************/
+        #video_upload-dropdown,
+        #notification-dropdown
+        {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown_video-upload,
+        .dropdown_notification
+        {
+          display: none;
+          position: absolute;
+          left:-100px;
+          background-color: #f9f9f9;
+          min-width: 200px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          padding: 15px;
+          z-index: 1;
+        }
+        /**********
+              Video Upload Dropdown
+              **********/
+              .dropdown_video-upload
+              {
+                  width:150px;
+                  padding:30px;
+                  height:80px;
+              }
+              /***********
+                  Dropdown Notifications
+                  **********/
+        .dropdown_notification > .flex-container
+        {
+          display:flex;
+          flex-direction: column;
+          justify-content: space-between;
+          
+        }
+        .dropdown_notification > .flex-container > hr
+        {
+          background-color:#01b6ab;
+          color:#01b6ab;
+          width:100%;
+          margin:10px auto;
+        }
+        .dropdown_notification > .flex-container > .row
+        {
+          display: flex;
+          margin:1rem auto;
+        }
+        .dropdown_notification > .flex-container > .row > img
+        {
+          height:60px;
+          width:60px;
+          margin-right:10px;
+          border-radius:50%;
+        }
+        
+        #video_upload-dropdown:hover  .dropdown_video-upload {
+          display: block;
+        }
+        #notification-dropdown:hover  .dropdown_notification {
+          display: block;
+        }
+        .dropdown_notification > .flex-container > .row:hover
+        {
+          color:#b92b27;
+        }
+/**************
+       Styles for the hero image
+       ****************/
 .hero {
   /* Photo by mnm.all on Unsplash */
   min-height:100vh;
@@ -31,7 +232,7 @@ html {
   
   background-size: cover;
   padding: 4rem 2rem;
-  position:relative;
+  position: relative;
  
   /* grid styles*/
   display: grid;
@@ -45,20 +246,27 @@ html {
 height:100vh;
 }
 */
+#video_homepage
+{
+    color:blue;
+    height:100vh;
+}
 
+/*Hero Image Heading*/
 .hero > h1 {
   font-size: 8rem;
   color:#b92b27;
   text-align:center;
   padding-bottom: 1rem;
 }
-
+/*Hero image yellow coloured text paragraph*/
 .hero > article > p {
   font-size: 1.5rem;
   color:#f5af19;
   font-weight: 200;
 }
 
+/*Hero images Button below the paragraph*/
 .hero_dashboard-redirect {
     background-color: #f5af19;
     text-decoration: none;
@@ -80,6 +288,59 @@ height:100vh;
    border:1px solid #f5af19;
   }
 
+  /* breweries styles */
+.video-gallery {
+  padding: 2rem;
+}
+
+.video-gallery > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  grid-gap: 1rem;
+}
+
+.video-gallery > ul > li {
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+}
+
+.video-gallery > ul > li > figure {
+  max-height: 220px;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  position: relative;
+}
+
+.video-gallery > ul > li > figure > img {
+  width: 100%;
+}
+
+.video-gallery > ul > li > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+}
+
+.video-gallery > ul > li > figure > figcaption > h3 {
+  color: white;
+  padding: .75rem;
+  font-size: 1.25rem;
+}
+
+.video-gallery> ul > li > p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem .75rem;
+  color: #666666;
+}
+
+.video-gallery > ul > li > a {
+  padding: .5rem 1rem;
+  margin: .5rem;
+}
+  
   /****************
     Responsiveness section
     ************/
@@ -113,3 +374,9 @@ height:100vh;
     }
     
 }
+@media screen and (max-height: 450px) 
+{
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
