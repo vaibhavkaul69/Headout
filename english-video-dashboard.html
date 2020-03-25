@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Zootopia-The Online Video Streaming Platform</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <!--Font Awesome library-->
+        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-replace-svg="nest"></script>
+        <!---------------------------Google Fonts----------------------------------------->
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles/index.css"/>
+    </head>
+    <body>
+
+        <iframe id="video_play-frameEnglish" name="videoPlayer" src="media/bg-poster.png " allowfullscreen frameborders="0"></iframe>
+        </body>
+        <script>
+            if(typeof(Storage)!=undefined)
+            {
+            console.log("Local Storage Exists");
+            document.getElementById('video_play-frameEnglish').src=localStorage.getItem('videoLink')
+            }
+            else
+            {
+            console.log("Local Storage Is Not available");
+            }
+        </script>
+</html>

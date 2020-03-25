@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
         <!--Font Awesome library-->
         <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-replace-svg="nest"></script>
+        <!---------------------------Google Fonts----------------------------------------->
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200&display=swap" rel="stylesheet" />
+        <!------------------Jquery CDN for scroll animation--------------------------->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link rel="stylesheet" href="styles/index.css"/>
     </head>
     <body>
@@ -12,27 +16,60 @@
                                                             Main Body begis here all page content will be child of this parent main
                                                                                                                             ------------------>
         <main class="wrapper" id="main">
-            <!------------------------------------------------------------
-                                                                Side navigation begins here
-                                                                    
-                <div id="mySidenav" class="sidenav">
-                    <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
-                  </div>
-                              ------------------------------------------>
 
+
+                <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <img src="media/user-image.jpg" alt="Profile Image of User" />
+                  <h6>My Account &darr;</h6>
+                  <li class="navbar-center">
+                    <input type="text" name="search_video" placeholder="Search For Videos" />
+                    <button class="fab fa-searchengin search-btn-navbar" ></button>
+                  </li>
+                  <div class="dropdown">
+                   <a href="#">Upload a Video</a>
+                    <div class="dropdown-content">
+                      <input type="file" accept="video/*" />
+                    </div>
+                  </div>
+                  
+                  <div class="dropdown">
+                    <a href="#">Notifications</a>
+                     <div class="dropdown-content">
+                      <div class="flex-container">
+                        <div class="row">
+                          <img src="media/notify.png" alt="User"/>
+                          <p>Your Have a New Notifiation.!</p>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                          <img src="media/notify.png" alt="User"/>
+                          <p>Your Have a New Notifiation.!</p>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                          <img src="media/notify.png" alt="User"/>
+                          <p>Your Have a New Notifiation.!</p>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                          <img src="media/notify.png" alt="User"/>
+                          <p>Your Have a New Notifiation.!</p>
+                        </div>
+                      </div>
+                     </div>
+                   </div>
+                </div>
                   <!---------------------------------------------------The top Navigation Bar begins here
                                                                                               --------------------------------->
                   <nav id="top_navbar">
-                    <!--
-                    <span style="font-size:30px;cursor:pointer; position: fixed; top:20px; left:20px; color:#000;" onclick="openNav()">&#9776;</span>
-                    -->
                     <div class="nav_items">
                         <ul class="navbar_list">
-                            <li class="navbar-left"><a href="../index.html" ><img src="media/navbar-logo.png" alt="Zootopia Logo Image" class="navbar_logo"/></a></li>
+                          <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="navbar-toggler">&#9776;</span>
+                          <li class="navbar-left">
+                            <a href="../index.html" ><img src="media/navbar-logo.png" alt="Zootopia Logo Image" class="navbar_logo"/>
+                            </a>
+                          </li>
                             <li class="navbar-center">
                               <input type="text" name="search_video" placeholder="Search For Videos" />
                               <button class="fab fa-searchengin search-btn-navbar" ></button>
@@ -55,28 +92,30 @@
                                   <div class="dropdown_menu dropdown_notification">
                                     <div class="flex-container">
                                     <div class="row">
-                                      <img src="media/user-image.jpg" alt="User"/>
+                                      <img src="media/notify.png" alt="User"/>
                                       <p>Your Have a New Notifiation.!</p>
                                     </div>
                                     <hr/>
                                     <div class="row">
-                                      <img src="media/user-image.jpg" alt="User"/>
+                                      <img src="media/notify.png"alt="User"/>
                                       <p>Your Have a New Notifiation.!</p>
                                     </div>
                                     <hr/>
                                     <div class="row">
-                                      <img src="media/user-image.jpg" alt="User"/>
+                                      <img src="media/notify.png" alt="User"/>
                                       <p>Your Have a New Notifiation.!</p>
                                     </div>
                                     <hr/>
                                     <div class="row">
-                                      <img src="media/user-image.jpg" alt="User"/>
+                                      <img src="media/notify.png" alt="User"/>
                                       <p>Your Have a New Notifiation.!</p>
                                     </div>
                                   </div>
                                   </div>
                                 </span>
-                                <span><img src="media/user-image.jpg" alt="Profile Image of User"/></span>
+                                <span class="user-image">
+                                  <img src="media/user-image.jpg" alt="Profile Image of User" />
+                                </span>
                             </div>
                          </ul>   
                     </div>
@@ -93,6 +132,7 @@
               </article>
             </section>
 
+            
             <!---------------------------------------------------------
                                                                 Main website content containing videos will be added here
                                                                 This is just like the homepage of youtube.
@@ -101,56 +141,285 @@
               <h1 class="video_homepage-mainHeading">
                 Recommended For You Folks.!
               </h1>
-              <div class="video-gallery" id="videoRecommend">
+              <hr class="hr-line-head-bottom"/>
+
+              <div class="video-gallery" id="videoRecommendHindi">
+                <h2>Latest Hindi Video Songs</h2>
                 <ul>
                   <li>
                     <figure>
-                      <!-- Photo by Quentin Dr on Unsplash -->
-                      <img src="https://images.unsplash.com/photo-1471421298428-1513ab720a8e" alt="Several hands holding beer glasses">
-                      <figcaption><h3>Billions upon billions</h3></figcaption>
+                      
+                      <img src="media/hindi/chaand-sifarish.png" alt="Chaand Sifarish Poster">
+                      <figcaption>
+                        <img src="media/hindi/yrf-logo.png" alt="Yash Raj Movies Logo" id="logo-image">
+                        <h3>Yash Raj Films<i class="fas fa-user-check" style="margin-left:5px;color:#01b6ab;"></i></h3>
+                      </figcaption>
                     </figure>
                     <p>
-                      Made in the interiors of collapsing stars star stuff harvesting star light venture billions upon billions Drake Equation brain is the seed of intelligence?
+                      Chand Sifarish - Full Song | Fanaa | Aamir Khan | Kajol | Shaan | Kailash Kher
                     </p>
-                    <a href="#">Visit Website</a>
+                    <h5>197,116,657 views Jan 23, 2012</h5>
+                    <a href="https://www.youtube.com/embed/zWEOx7TSM6I"  target="_top">View Video</a>
                   </li>
                   <li>
                     <figure>
-                      <!-- Photo by Drew Farwell on Unsplash -->
-                      <img src="https://images.unsplash.com/photo-1513309914637-65c20a5962e1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80" alt="Several friends doing a toast">
-                      <figcaption><h3>Drake Equation</h3></figcaption>
+                      
+                      <img src="media/hindi/daawat-ishq.png" alt="Dawat-E-Ishq Poster">
+                      <figcaption>
+                        <img src="media/hindi/yrf-logo.png" alt="Yash Raj Movies Logo" id="logo-image">
+                        <h3>Yash Raj Films<i class="fas fa-user-check" style="margin-left:5px;color:#01b6ab;"></i></h3>
+                      </figcaption>
                     </figure>
                     <p>
-                      Another world citizens of distant epochs from which we spring descended from astronomers Orion's sword shores of the cosmic ocean.
+                      Daawat-e-Ishq - Full Song | Aditya Roy Kapur | Parineeti Chopra | Javed Ali | Sunidhi Chauhan
                     </p>
-                    <a href="#">Visit Website</a>
+                    <h5>197,116,657 views Jan 23, 2012</h5>
+                    <a href="https://www.youtube.com/embed/xsWs0qWQlzE" target="_top">View Video</a>
                   </li>
                   <li>
                     <figure>
-                      <!-- Photo by Rawpixel on Unsplash -->
-                      <img src="https://images.unsplash.com/photo-1535359056830-d4badde79747?ixlib=rb-1.2.1&auto=format&fit=crop&w=3402&q=80" alt="Three different glasses of beer">
-                      <figcaption><h3>Vast cosmic arena</h3></figcaption>
+                     
+                      <img src="media/hindi/dil-se-re.png" alt="Dil Se Re Poster">
+                      <figcaption>
+                        <img src="media/hindi/yrf-logo.png" alt="Yash Raj Movies Logo" id="logo-image">
+                        <h3>Yash Raj Films<i class="fas fa-user-check" style="margin-left:5px;color:#01b6ab;"></i></h3>
+                      </figcaption>
                     </figure>
                     <p>
-                      Galaxies the ash of stellar alchemy prime number science inconspicuous motes of rock and gas brain is the seed of intelligence.
+                      Dil Se Re Full Song | Dil Se | Shahrukh Khan, Manisha Koirala | A R Rahman
                     </p>
-                    <a href="#">Visit Website</a>
+                    <h5>197,116,657 views Jan 23, 2012</h5>
+                    <a href="https://www.youtube.com/embed/YwfCMvo19s8" target="_top">View Video</a>
                   </li>
                 </ul>
               </div>
 
+              <!---------------------------------------
+                                        Punjabi VIdeo songs section
+                                      --------------------------------->
+             <div class="video-gallery" id="videoRecommendPunjabi">
+                <h2>Latest Punjabi Video Songs</h2>
+                <ul>
+                  <li>
+                    <figure>
+                     
+                      <img src="media/punjabi/bombay-to-punjab.png" alt="Bombay To Punjab Poster">
+                      <figcaption>
+                        <img src="media/punjabi/speed-records-logo.png" alt="Speed Records Logo" id="logo-image">
+                        <h3>Speed Records<i class="fas fa-user-check" style="margin-left:5px;color:#01b6ab;"></i></h3>
+                      </figcaption>
+                    </figure>
+                    <p>
+                      Bombay To Punjab : DEEP JANDU Ft. DIVINE (Full Video) Karan Aujla | Latest Punjabi Song 
+                    </p>
+                    <h5>197,116,657 views Jan 23, 2012</h5>
+                    <a href="https://www.youtube.com/embed/cdR7tzSOhtE" target="_top">View Video</a>
+                  </li>
+                  <li>
+                    <figure>
+                      
+                      <img src="media/punjabi/gani.png" alt="Gani Song Poster">
+                      <figcaption>
+                        <img src="media/punjabi/speed-records-logo.png" alt="Speed Records Logo" id="logo-image">
+                        <h3>Speed Records<i class="fas fa-user-check" style="margin-left:5px;color:#01b6ab;"></i></h3>
+                      </figcaption>
+                    </figure>
+                    <p>
+                      Gani (Full Video) | Akhil Feat Manni Sandhu | Latest Punjabi Song 2016 | Speed Records
+                    </p>
+                    <h5>197,116,657 views Jan 23, 2012</h5>
+                    <a href="https://www.youtube.com/embed/FNxD8nRCCms" target="_top">View Video</a>
+                  </li>
+                  <li>
+                    <figure>
+                      
+                      <img src="media/punjabi/khaab.png" alt="Khaab Song Poster">
+                      <figcaption>
+                        <img src="media/punjabi/speed-records-logo.png" alt="Speed Records Logo" id="logo-image">
+                        <h3>Speed Records<i class="fas fa-user-check" style="margin-left:5px;color:#01b6ab;"></i></h3>
+                      </figcaption>
+                    </figure>
+                    <p>
+                      Khaab | Akhil | Parmish Verma | New Punjabi Video Song 2018 | Speed Records |
+                    </p>
+                    <h5>197,116,657 views Jan 23, 2012</h5>
+                    <a href="https://www.youtube.com/embed/2eliQ_KR8yA" target="_top">View Video</a>
+                  </li>
+                </ul>
+              </div>
+              <!---------------------------------------
+                                        English VIdeo songs section
+                                      --------------------------------->
+             <div class="video-gallery" id="videoRecommendEnglish">
+              <h2>Latest English Video Songs</h2>
+              <ul>
+                <li>
+                  <figure>
+                   
+                    <img src="media/english/blank-space.png" alt="Blank Space Poster">
+                    <figcaption>
+                      <img src="media/english/vevo-logo.png" alt="Vevo Videos Logo" id="logo-image">
+                      <h3>Vevo<i class="fas fa-user-check" style="margin-left:5px;color:#01b6ab;"></i></h3>
+                    </figcaption>
+                  </figure>
+                  <p>
+                    Taylor Swift - Blank Space | Latest English Song | Vevo Media Pvt Ltd
+                  </p>
+                  <h5>197,116,657 views Jan 23, 2012</h5>
+                  <a href="https://www.youtube.com/embed/e-ORhEE9VVg" target="_top">View Video</a>
+                </li>
+                <li>
+                  <figure>
+                    
+                    <img src="media/english/despacito.png" alt="Despacito Poster">
+                    <figcaption>
+                      <img src="media/english/vevo-logo.png" alt="Vevo Videos Logo" id="logo-image">
+                      <h3>Vevo<i class="fas fa-user-check" style="margin-left:5px;color:#01b6ab;"></i></h3>
+                    </figcaption>
+                  </figure>
+                  <p>
+                    Luis Fonsi - Despacito ft. Daddy Yankee | Latest Spanish Song | Vevo Media Pvt Ltd
+                  </p>
+                  <h5>197,116,657 views Jan 23, 2012</h5>
+                  <a href="https://www.youtube.com/embed/kJQP7kiw5Fk" target="_top">View Video</a>
+                </li>
+                <li>
+                  <figure>
+                    
+                    <img src="media/english/faded.png" alt="Alan Walker Faded Poster">
+                    <figcaption>
+                      <img src="media/english/vevo-logo.png" alt="Vevo Videos Logo" id="logo-image">
+                      <h3>Speed Records<i class="fas fa-user-check" style="margin-left:5px;color:#01b6ab;"></i></h3>
+                    </figcaption>
+                  </figure>
+                  <p>
+                    Alan Walker - Faded | Latest English Song | Vevo Media Pvt Ltd
+                  </p>
+                  <h5>197,116,657 views Jan 23, 2012</h5>
+                  <a href="https://www.youtube.com/embed/60ItHLz5WEA" target="_top">View Video</a>
+                </li>
+              </ul>
+            </div>
+            
+              
             </section>
           </main>
+          
     </body>
     <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-        }
+    
+
+     if(typeof(Storage)!=undefined)
+     {
+       console.log("Local Storage Exists");
+      /*Creates a variable which stores the NodeList of all 'a' tags as 
+      returned by querySelectorall()
+      */
+       var linkHindiVideo=document.getElementById('videoRecommendHindi').querySelectorAll('a');
+
+      /*Store value of the href attribute of the first node elements 
+      'a' tag in the browsers local storage
+      */
+
+       linkHindiVideo[0].addEventListener('click',function(){
+         localStorage.setItem('videoLink',linkHindiVideo[0].href);
+         linkHindiVideo[0].href='english-video-dashboard.html';
+       });
+
+       /*Store value of the href attribute of the second node elements 
+      'a' tag in the browsers local storage
+      */
+
+      linkHindiVideo[1].addEventListener('click',function(){
+         localStorage.setItem('videoLink',linkHindiVideo[1].href);
+         linkHindiVideo[1].href='english-video-dashboard.html';
+       });
+
+       /*Store value of the href attribute of the third node elements 
+      'a' tag in the browsers local storage
+      */
+
+      linkHindiVideo[2].addEventListener('click',function(){
+         localStorage.setItem('videoLink',linkHindiVideo[2].href);
+         linkHindiVideo[2].href='english-video-dashboard.html';
+       });
+
+       /*Creates a variable which stores the NodeList of all 'a' tags as 
+      returned by querySelectorall()
+      */
+      var linkPunjabiVideo=document.getElementById('videoRecommendPunjabi').querySelectorAll('a');
+      
+      /*Store value of the href attribute of the first node elements 
+      'a' tag in the browsers local storage
+      */
+
+      linkPunjabiVideo[0].addEventListener('click',function(){
+         localStorage.setItem('videoLink',linkPunjabiVideo[0].href);
+         linkPunjabiVideo[0].href='english-video-dashboard.html';
+       });
+
+       /*Store value of the href attribute of the second node elements 
+      'a' tag in the browsers local storage
+      */
+
+      linkPunjabiVideo[1].addEventListener('click',function(){
+         localStorage.setItem('videoLink',linkPunjabiVideo[1].href);
+         linkPunjabiVideo[1].href='english-video-dashboard.html';
+       });
+
+       /*Store value of the href attribute of the third node elements 
+      'a' tag in the browsers local storage
+      */
+
+      linkPunjabiVideo[2].addEventListener('click',function(){
+         localStorage.setItem('videoLink',linkPunjabiVideo[2].href);
+         linkPunjabiVideo[2].href='english-video-dashboard.html';
+       });
+
+        /*Creates a variable which stores the NodeList of all 'a' tags as 
+      returned by querySelectorall()
+      */
+      var linkEnglishVideo=document.getElementById('videoRecommendEnglish').querySelectorAll('a');
+      
+      /*Store value of the href attribute of the first node elements 
+      'a' tag in the browsers local storage
+      */
+
+      linkEnglishVideo[0].addEventListener('click',function(){
+         localStorage.setItem('videoLink',linkEnglishVideo[0].href);
+         linkEnglishVideo[0].href='english-video-dashboard.html';
+       });
+
+       /*Store value of the href attribute of the second node elements 
+      'a' tag in the browsers local storage
+      */
+
+      linkEnglishVideo[1].addEventListener('click',function(){
+         localStorage.setItem('videoLink',linkEnglishVideo[1].href);
+         linkEnglishVideo[1].href='english-video-dashboard.html';
+       });
+
+       /*Store value of the href attribute of the third node elements 
+      'a' tag in the browsers local storage
+      */
+
+      linkEnglishVideo[2].addEventListener('click',function(){
+         localStorage.setItem('videoLink',linkEnglishVideo[2].href);
+         linkEnglishVideo[2].href='english-video-dashboard.html';
+       });
+     }
+     else
+     {
+       console.log("Local Storage Is Not available");
+     }
+    
+      
+     function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
         </script>
 </html>
