@@ -3,6 +3,7 @@
     <head>
         <title>Zootopia-The Online Video Streaming Platform</title>
         <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link rel="icon" href="media/navbar-logo.png"/>
         <!--Font Awesome library-->
         <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" data-auto-replace-svg="nest"></script>
         <!---------------------------Google Fonts----------------------------------------->
@@ -25,6 +26,15 @@
                   <li class="navbar-center">
                     <input type="text" name="search_video" placeholder="Search For Videos" />
                     <button class="fab fa-searchengin search-btn-navbar" ></button>
+                  </li>
+                  <li class="navbar-center">
+                    <a href="english-video-dashboard.html" target="_top">Watch New English Uploads</a>
+                  </li>
+                  <li class="navbar-center">
+                    <a href="punjabi-video-dashboard.html" target="_top">Watch New Punjabi Uploads</a>
+                  </li>
+                  <li class="navbar-center">
+                    <a href="hindi-video-dashboard.html" target="_top">Watch New Hindi Uploads</a>
                   </li>
                   <div class="dropdown">
                    <a href="#">Upload a Video</a>
@@ -127,8 +137,11 @@
             <section class="hero">
                 <h1>Zootopia</h1>
               <article>
-                <p>Explore Zoodios with just one click and stirred by starlight across the centuries light years great turbulent clouds circumnavigated paroxysm of global death.</p>
-                <a href="#video_homepage" class="hero_dashboard-redirect">Browse Breweries</a>
+                <p>Explore Zootopic videos with just one click and get ready to experience the best video streaming service online
+                  <br/>
+                  Zootopia is an Indian  video hosting service founded on March 24, 2020.
+                </p>
+                <a href="#video_homepage" class="hero_dashboard-redirect">Browse Videos</a>
               </article>
             </section>
 
@@ -289,7 +302,7 @@
                     <img src="media/english/faded.png" alt="Alan Walker Faded Poster">
                     <figcaption>
                       <img src="media/english/vevo-logo.png" alt="Vevo Videos Logo" id="logo-image">
-                      <h3>Speed Records<i class="fas fa-user-check" style="margin-left:5px;color:#01b6ab;"></i></h3>
+                      <h3>Vevo<i class="fas fa-user-check" style="margin-left:5px;color:#01b6ab;"></i></h3>
                     </figcaption>
                   </figure>
                   <p>
@@ -304,116 +317,13 @@
               
             </section>
           </main>
+          <footer id="footer">
+            <h5>Website Created with &hearts; By <a href="https://www.linkedin.com/in/vaibhav-kaul-ab5941182/" target="_blank">Vaibhav Kaul.</a></h5>
+          </footer>
           
     </body>
+    <script src="post-to-localstorage.js"></script>
     <script>
-    
-
-     if(typeof(Storage)!=undefined)
-     {
-       console.log("Local Storage Exists");
-      /*Creates a variable which stores the NodeList of all 'a' tags as 
-      returned by querySelectorall()
-      */
-       var linkHindiVideo=document.getElementById('videoRecommendHindi').querySelectorAll('a');
-
-      /*Store value of the href attribute of the first node elements 
-      'a' tag in the browsers local storage
-      */
-
-       linkHindiVideo[0].addEventListener('click',function(){
-         localStorage.setItem('videoLink',linkHindiVideo[0].href);
-         linkHindiVideo[0].href='english-video-dashboard.html';
-       });
-
-       /*Store value of the href attribute of the second node elements 
-      'a' tag in the browsers local storage
-      */
-
-      linkHindiVideo[1].addEventListener('click',function(){
-         localStorage.setItem('videoLink',linkHindiVideo[1].href);
-         linkHindiVideo[1].href='english-video-dashboard.html';
-       });
-
-       /*Store value of the href attribute of the third node elements 
-      'a' tag in the browsers local storage
-      */
-
-      linkHindiVideo[2].addEventListener('click',function(){
-         localStorage.setItem('videoLink',linkHindiVideo[2].href);
-         linkHindiVideo[2].href='english-video-dashboard.html';
-       });
-
-       /*Creates a variable which stores the NodeList of all 'a' tags as 
-      returned by querySelectorall()
-      */
-      var linkPunjabiVideo=document.getElementById('videoRecommendPunjabi').querySelectorAll('a');
-      
-      /*Store value of the href attribute of the first node elements 
-      'a' tag in the browsers local storage
-      */
-
-      linkPunjabiVideo[0].addEventListener('click',function(){
-         localStorage.setItem('videoLink',linkPunjabiVideo[0].href);
-         linkPunjabiVideo[0].href='english-video-dashboard.html';
-       });
-
-       /*Store value of the href attribute of the second node elements 
-      'a' tag in the browsers local storage
-      */
-
-      linkPunjabiVideo[1].addEventListener('click',function(){
-         localStorage.setItem('videoLink',linkPunjabiVideo[1].href);
-         linkPunjabiVideo[1].href='english-video-dashboard.html';
-       });
-
-       /*Store value of the href attribute of the third node elements 
-      'a' tag in the browsers local storage
-      */
-
-      linkPunjabiVideo[2].addEventListener('click',function(){
-         localStorage.setItem('videoLink',linkPunjabiVideo[2].href);
-         linkPunjabiVideo[2].href='english-video-dashboard.html';
-       });
-
-        /*Creates a variable which stores the NodeList of all 'a' tags as 
-      returned by querySelectorall()
-      */
-      var linkEnglishVideo=document.getElementById('videoRecommendEnglish').querySelectorAll('a');
-      
-      /*Store value of the href attribute of the first node elements 
-      'a' tag in the browsers local storage
-      */
-
-      linkEnglishVideo[0].addEventListener('click',function(){
-         localStorage.setItem('videoLink',linkEnglishVideo[0].href);
-         linkEnglishVideo[0].href='english-video-dashboard.html';
-       });
-
-       /*Store value of the href attribute of the second node elements 
-      'a' tag in the browsers local storage
-      */
-
-      linkEnglishVideo[1].addEventListener('click',function(){
-         localStorage.setItem('videoLink',linkEnglishVideo[1].href);
-         linkEnglishVideo[1].href='english-video-dashboard.html';
-       });
-
-       /*Store value of the href attribute of the third node elements 
-      'a' tag in the browsers local storage
-      */
-
-      linkEnglishVideo[2].addEventListener('click',function(){
-         localStorage.setItem('videoLink',linkEnglishVideo[2].href);
-         linkEnglishVideo[2].href='english-video-dashboard.html';
-       });
-     }
-     else
-     {
-       console.log("Local Storage Is Not available");
-     }
-    
-      
      function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
       }
